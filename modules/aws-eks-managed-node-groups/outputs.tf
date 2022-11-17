@@ -52,3 +52,7 @@ output "managed_nodegroup_context" {
   description = "Launch Template version for EKS Managed Node Group"
   value       = var.context
 }
+
+output "managed_node_group" {
+  value = local.managed_node_group
+}
