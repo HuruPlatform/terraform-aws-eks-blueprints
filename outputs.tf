@@ -205,5 +205,12 @@ output "teams" {
 
 output "managed_nodegroup_context" {
   description = "Launch Template version for EKS Managed Node Group"
-  value       = module.aws_eks_managed_node_groups.managed_nodegroup_context
+  value = local.node_group_context
+//  value       = module.aws_eks_managed_node_groups.managed_nodegroup_context
 }
+
+output "managed_nodegroup_context_green" {
+  description = "Launch Template version for EKS Managed Node Group"
+  value       = module.aws_eks_managed_node_groups[0].managed_nodegroup_context
+}
+
