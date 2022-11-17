@@ -47,3 +47,8 @@ output "managed_nodegroup_launch_template_latest_version" {
   description = "Launch Template version for EKS Managed Node Group"
   value       = aws_launch_template.managed_node_groups[*].default_version
 }
+
+output "managed_nodegroup_context" {
+  description = "Launch Template version for EKS Managed Node Group"
+  value       = var.context
+}

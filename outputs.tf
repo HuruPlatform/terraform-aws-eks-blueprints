@@ -201,3 +201,9 @@ output "teams" {
   description = "Outputs from EKS Fargate profiles groups "
   value       = var.create_eks && (length(var.platform_teams) > 0 || length(var.application_teams) > 0) ? module.aws_eks_teams[*] : []
 }
+
+
+output "managed_nodegroup_context" {
+  description = "Launch Template version for EKS Managed Node Group"
+  value       = module.aws_eks_managed_node_groups.managed_nodegroup_context
+}
