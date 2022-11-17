@@ -214,7 +214,7 @@ output "managed_nodegroup_context_green" {
   value       = module.aws_eks_managed_node_groups
 }
 
-output managed_node_group" {
+output "managed_node_group" {
   value = module.aws_eks_managed_node_groups.managed_node_group
 }
 

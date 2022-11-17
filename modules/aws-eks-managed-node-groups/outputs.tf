@@ -54,5 +54,6 @@ output "managed_nodegroup_context" {
 }
 
 output "managed_node_group" {
+  description = "Launch Template version for EKS Managed Node Group"
   value = local.managed_node_group
 }
