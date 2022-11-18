@@ -53,6 +53,12 @@ output "managed_nodegroup_context" {
   value       = var.context
 }
 
+output "managed_nodegroup_managed_ng" {
+  description = "Launch Template version for EKS Managed Node Group"
+  value       = var.managed_ng
+}
+
+
 output "managed_node_group" {
   description = "Launch Template version for EKS Managed Node Group"
   value = local.managed_node_group

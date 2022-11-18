@@ -234,3 +234,7 @@ output "managed_nodegroup_launch_template_latest_version" {
   value       = module.aws_eks_managed_node_groups["green"].managed_nodegroup_launch_template_latest_version
 }
 
+output "managed_nodegroup_managed_ng" {
+  description = "Launch Template version for EKS Managed Node Group"
+  value       = module.aws_eks_managed_node_groups["green"].managed_ng
+}
