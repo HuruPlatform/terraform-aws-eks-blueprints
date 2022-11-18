@@ -215,7 +215,7 @@ output "managed_nodegroup_context_green" {
 }
 
 output "managed_node_group" {
-  value = module.aws_eks_managed_node_groups.green
+  value = module.aws_eks_managed_node_groups["green"]
 }
 
 
