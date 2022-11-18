@@ -215,6 +215,22 @@ output "managed_nodegroup_context_green" {
 }
 
 output "managed_node_group" {
-  value = module.aws_eks_managed_node_groups
+  value = module.aws_eks_managed_node_groups.green
+}
+
+
+output "managed_nodegroup_launch_template_id" {
+  description = "Launch Template ID for EKS Managed Node Group"
+  value       = module.aws_eks_managed_node_groups.green.managed_node_groups[*].id
+}
+
+output "managed_nodegroup_launch_template_arn" {
+  description = "Launch Template ARN for EKS Managed Node Group"
+  value       = module.aws_eks_managed_node_groups.green.managed_node_groups[*].arn
+}
+
+output "managed_nodegroup_launch_template_latest_version" {
+  description = "Launch Template version for EKS Managed Node Group"
+  value       = module.aws_eks_managed_node_groups.green.managed_node_groups[*].default_version
 }
 
